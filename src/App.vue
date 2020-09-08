@@ -1,32 +1,58 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="header">
+      <h3>
+        <b>Vue Jsss To do App</b>
+      </h3>
+
+      <hr />
+
     </div>
-    <router-view/>
+
+
+
+
+    <listForm /> 
+
+
+    
+
+
   </div>
 </template>
 
+<script>
+import listForm from "./components/HelloWorld"; 
+export default {
+  name: "Wtf", 
+  components: {
+    listForm, 
+  }
+
+
+}
+</script>
+
 <style>
+
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+
+}
+
+
+.header{
+  margin-left: 20px;
+}
+
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-#nav {
-  padding: 30px;
-}
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
